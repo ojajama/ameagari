@@ -1,0 +1,621 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: #333;
+    font-size: 1.2rem;
+    font-family: "Hiragino Kaku Gothic ProN",Meiryo, sans-serif;
+    word-break: normal;
+}
+a:link, a:visited, a:hover, a:active {
+    color: #d03c56;
+    text-decoration:none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* --------------------------------
+ * parts
+ * -------------------------------- */
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.heading {
+  padding: 10px 12px;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+}
+.hidden {
+  display: none;
+}
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+
+.header {
+    width: 100%;
+    padding: 28px 0 10px;
+    box-shadow: 3px 3px 6px 1px #e3e3e3;
+}
+.logo {
+    width: 225px;
+    height: 67px;
+    margin: 0 auto;
+    background: url('../images/logo.jpg') no-repeat;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;    
+}
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.global-nav {
+    margin-top: 15px;
+    text-align: center;
+}
+.global-nav .nav-item {
+    display: inline-block;
+    margin: 0 10px;
+}
+.global-nav .nav-item a {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 8px;
+    color: #666;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    transition: 0.15s;
+}
+.global-nav .nav-item.active a,
+.global-nav .nav-item a:hover {
+    background-color: #d03c56;
+    color: #fff;
+}
+.global-nav .ikuji-item {
+    display: inline-block;
+    margin: 10px 10px;
+}
+.global-nav .ikuji-item a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 80px;
+    color: #666;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: 0.15s;
+}
+.global-nav .ikuji-item.active a,
+.global-nav .ikuji-item a:hover {
+    background-color: #d03c56;
+    color: #fff;
+}
+
+/* --------------------------------
+ * wrapper
+ * -------------------------------- */
+
+.wrapper {
+  width: 970px;
+  margin: 30px auto 40px;
+}
+
+/* --------------------------------
+ * main
+ * -------------------------------- */
+
+.main {
+    display: block;
+    float: left;
+    width: 660px;
+}
+.topic {
+    display: block;
+    height: 440px;
+    margin-bottom: 30px;
+    transition: opacity 0.15s;
+}
+.topic:hover {
+    opacity: 0.85;
+}
+.topic .image-left {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.topic .image-right {
+    float: right;
+    width: 48%;
+    height: 100%;
+}
+.topic .contentAll {
+    float: left;
+    width: 100%;
+    height: relative;
+    padding: 20px 10px 20px;
+    background-color: ivory;
+    line-height: 1.6;
+    text-indent: 1.5rem;
+    font-size: 1.5rem;
+}
+.topic .title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2d3d54;
+    font-size: 1.8rem;
+}
+.topic .manualCenter {
+    text-align: center;
+}
+
+.heading {
+    padding: 10px 12px;
+    background-color: antiquewhite;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+}
+
+.hani .heading {
+    padding: 10px 10px;
+    width: 200px;
+    text-align: left;
+    background-color: aliceblue;
+}
+.hani .contentAll {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    padding: 20px 10px;
+    background-color: aliceblue;
+}
+.hani .scroll-item {
+    overflow-x: auto;
+    text-overflow: clip;
+    margin-bottom: 40px;
+    height: 400px;
+}
+.hani .from {
+    padding: 20px 10px;
+    text-align: right;
+}
+
+.kondate .heading {
+    background-color: lavender;
+    margin-bottom: 20px;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.kondate  .contentAll {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    width: 85%;
+    height: 300px;
+    margin-left: 40px;
+    margin-right: 40px;
+    line-height: 1.6;
+    text-indent: 1.5rem;
+    font-size: 1.5rem;
+    padding-left: 2.5rem;
+}
+.kondate ul {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    padding: 10px 20px 10px;
+    list-style-type: none;
+    line-height: 1.6;
+    font-size: 1.6rem;
+    background-color: lavenderblush;
+}
+.kondate .lead .contentAll {
+    padding: 10px 25px 30px;
+}
+
+.kondate .scroll-item {
+    overflow-x: auto;
+    text-overflow: clip;
+    margin-bottom: 40px;
+    height: 400px;
+}
+
+.scroll-list {
+    max-height: 220px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+.scroll-list .scroll-item a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    font-size: 0;
+    transition: background-color 0.1s;
+}
+.scroll-list .scroll-item:nth-of-type(even) a {
+    background-color: aliceblue;
+}
+.scroll-list .scroll-item a:hover {
+    background-color: #fafaf8;
+}
+.scroll-list .date {
+    display: inline-block;
+    width: 10%;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.0rem;
+}
+.scroll-list .title {
+    display: inline-block;
+    width: 80%;
+    padding-left: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1.2rem;
+}
+
+.kon .heading {
+    padding: 10px 10px;
+    width: 200px;
+    text-align: left;
+    background-color: lavender;
+}
+.kon .title {
+    text-align: left;
+    font-size: 1.2rem;
+}
+.kon ul {
+    list-style-type: none;
+    width: 100%;
+    margin-left: 0;
+    line-height: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: lavenderblush;
+}
+.kon .scroll-list .scroll-item:nth-of-type(even) a {
+    background-color: lavender;
+}
+.kon .scroll-list .scroll-item a:hover {
+    background-color: lightcoral;
+}
+
+.diary-box {
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 70px;
+    margin-bottom: 30px;
+    padding: 0px 6px 0;
+    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.15s;
+}
+.diary-box:hover {
+    opacity: 0.8;
+}
+.diary-box .title {
+    margin-top: 20px;
+    color:#555;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+.diary-box .desc {
+    margin-top: 5px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.diary-box:nth-of-type(odd) {
+    float: left;
+}
+.diary-box:nth-of-type(even) {
+    float: left;
+}
+.diary-box-big {
+    position: relative;
+    display: block;
+    width: 210px;
+    height: 210px;
+    margin-bottom: 30px;
+    padding: 10px 30px 0;
+    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.15s;
+}
+.diary-box-big:hover {
+    opacity: 0.8;
+}
+.diary-box-big .title {
+    margin-top: 20px;
+    color:#555;
+    font-size: 2.0rem;
+    line-height: 1.6;
+}
+.diary-box-big .desc {
+    margin-top: 5px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:inherit;
+    font-size: 1.8rem;
+}
+.diary-box-big:nth-of-type(odd) {
+    float: left;
+}
+.diary-box-big:nth-of-type(even) {
+    float: left;
+}
+
+.sidemenu {
+    float: right;
+    width: 275px;
+}
+.column {
+    margin-bottom: 30px;
+    list-style-type: none;
+}
+.column .column-item {
+    margin-top: 15px;
+}
+.column .column-item a {
+    display: block;
+    font-size: 0;
+    transition: opacity 0.15s;
+}
+.column .column-item a:hover {
+    opacity: 0.8;
+}
+.column .text {
+    display: inline-block;
+    width: 182px;
+    color: #000;
+    vertical-align: top;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-indent: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.column .contentAll {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-indent: 1.8rem;
+}
+.column .title {
+    font-size: 2rem;
+    margin-right: 20px;
+    margin-left: 40px;
+}
+.column .manual {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.column .scroll-item {
+    overflow-x: auto;
+    text-overflow: clip;
+    margin-bottom: 40px;
+    height: 400px;
+}
+
+.house .heading {
+    background-color: aliceblue;
+}
+.flower .heading {
+    background-color: aliceblue;
+}
+.house .title {
+    font-size: 1.2rem;
+    padding: 0px 10px 0px;
+}
+.house .manual {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 0px 20px 0px;
+}
+.house ul {
+    list-style-type: none;
+}
+.house li:nth-of-type(odd) {
+    background-color: floralwhite;
+}
+.house li:nth-of-type(even) {
+    background-color: papayawhip;
+}
+
+.parent {
+    display: table;
+    width: 100%;
+    border: 2px solid white;
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+    table-layout: fixed;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+.house .child {
+    display: table-cell;
+    border: 6px solid white;
+    background-color: azure;
+}
+.child_bold {
+    display: table-cell;
+    text-align: left;
+    font-weight: bold;
+    width: 5%;
+}
+.flower .child {
+    display: table-cell;
+    border: 6px solid white;
+    background-color: lavenderblush;
+}
+.mainAll .parent {
+    border: 5px solid white;
+    border-collapse: separate;
+    border-spacing: 20px 20px;
+    table-layout: auto;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+.mainAll .child_bold1 {
+    display: table-cell;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 5%;
+}
+.mainAll .child1_0 {
+    display: table-cell;
+    border: 2px solid white;
+    background-color: whitesmoke;
+    color: darkblue;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 0 10px;
+    width: 18%;
+}
+.mainAll .child2_0 {
+    display: table-cell;
+    border: 2px solid white;
+    background-color: whitesmoke;
+    color: darkblue;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 0 10px;
+    width: 18%;
+}
+.mainAll .child1_1 {
+    display: table-cell;
+    border: 2px solid white;
+    background-color: lightgrey;
+    color: darkblue;
+    padding: 10px 8px 10px;
+}
+.mainAll .child1_2 {
+    display: table-cell;
+    border: 2px solid white;
+    background-color: lightgrey;
+    color: darkblue;
+    padding: 10px 8px 10px;
+}
+.mainAll .child_bold2 {
+    display: table-cell;
+    border: 2px solid white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 5%;
+}
+.mainAll .child2_1 {
+    display: table-cell;
+    border: 2px solid white;
+    background-color: lightgrey;
+    color: darkblue;
+    padding: 10px 8px 10px;
+}
+.mainAll .child2_2 {
+    display: table-cell;
+    border: 2px solid white;
+    background-color: lightgrey;
+    color: darkblue;
+    padding: 10px 8px 10px;
+}
+.mainAll .child_bold3 {
+    display: table-cell;
+    border: 16px solid white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 20%;
+}
+.mainAll .house .parent {
+    table-layout: fixed;
+}
+.mainAll .flower .parent {
+    table-layout: fixed;
+}
+
+.koto {
+    margin: 10px 10px 30px;
+}
+.koto,
+.koto ul {
+    list-style-type: none;
+}
+.koto > li .title {
+    margin: 15px 0;
+    padding-left: 8px;
+    border-left: 5px solid #d03c56;
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+.koto > li + li {
+    margin-top: 25px;
+}
+.koto > li ul {
+    margin: 15px;
+}
+.koto > li ul > li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+.koto a:hover {
+    text-decoration: underline;
+}
+.footer {
+    width: 100%;
+    padding: 20px 0 30px;
+    background: #2d3d54;
+    color: #fff;
+}
+.horizontal-list {
+    width: 970px;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 0;
+}
+.horizontal-list .horizontal-item {
+    display: inline-block;
+    padding: 0 15px;
+    letter-spacing: 1px;
+}
+.horizontal-list .horizontal-item + .horizontal-item {
+    border-left: 1px solid #bbb;
+}
+
+.horizontal-list .horizontal-item a {
+    border-bottom: 1px dashed #777;
+    color: #bbb;
+    font-size: 1.1rem;
+    transition: color 0.15s;
+}
+.horizontal-list .horizontal-item a:hover {
+    color: #ddd;
+}
+.copyright {
+    margin-top: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+}

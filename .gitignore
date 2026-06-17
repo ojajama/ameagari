@@ -1,0 +1,26 @@
+# 画像・動画・バイナリ（Gitで管理しない）
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.gif
+*.GIF
+*.png
+*.PNG
+*.MOV
+*.mov
+*.mp4
+*.MP4
+*.dcr
+*.pdf
+*.PDF
+*.thmx
+*.db
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# その他バイナリ
+*.swp
+*.bak

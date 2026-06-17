@@ -1,0 +1,8 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.yk\.rim\.or\.jp)(:80)? [NC]
+RewriteRule ^(.*) https://yk.rim.or.jp/$1 [R=301,L]
+order deny,allow
