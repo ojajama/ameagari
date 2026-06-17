@@ -1,75 +1,178 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=utf-8">
-  <meta name="keywords" content="ばあちゃんも生きとるよ" />
-  <meta name="description" content="老いの向こうに何が見えるかと他人事のように思いながらサイトを作ったのが20数年前。いつのまにか、老いの坂にさしかかり、60の手習いで、Webアプリを作り始めた。" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="ばあちゃんも生きとるよ">
+  <meta name="description" content="老いの向こうに何が見えるかと他人事のように思いながらサイトを作ったのが20数年前。いつのまにか、老いの坂にさしかかり、60の手習いで、Webアプリを作り始めた。">
   <title>なんでんよか｜ばあちゃんも生きとるよ！</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <style>
-    body{text-align: center; background-color: #99ccff;}
-    a{text-decoration: none;}
-    .title{margin:30px;}
-    .date{list-style: none;}
-    .greeting{font-weight: bold;}
-    navi > ul{list-style: none; font-size: 1.1em;}
-    footer{margin-bottom:30px;}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, sans-serif;
+      background-color: #aed6f1;
+      color: #2c3e50;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ヘッダー */
+    header {
+      text-align: center;
+      padding: 2.5rem 1rem 1rem;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .publish-date {
+      list-style: none;
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #5d6d7e;
+      line-height: 1.8;
+    }
+
+    /* メイン */
+    main {
+      width: min(640px, 94vw);
+      margin: 1rem auto 2rem;
+    }
+
+    /* あいさつ */
+    .greeting {
+      background: rgba(255, 255, 255, 0.55);
+      border: 2px solid #7fb3d3;
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      line-height: 2;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+
+    .greeting p + p { margin-top: 0.8rem; }
+
+    /* ナビ */
+    nav {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .nav-section {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      padding: 0.9rem 1.2rem;
+      list-style: none;
+    }
+
+    .nav-section li + li {
+      margin-top: 0.5rem;
+      border-top: 1px solid rgba(0,0,0,0.07);
+      padding-top: 0.5rem;
+    }
+
+    .nav-section a {
+      display: block;
+      padding: 0.2rem 0;
+      font-size: 1rem;
+      transition: color 0.2s, padding-left 0.2s;
+    }
+
+    .nav-section a:hover {
+      color: #1a6fa3;
+      padding-left: 0.4rem;
+    }
+
+    .nav-section a::before {
+      content: "▸ ";
+      color: #7fb3d3;
+      font-size: 0.8em;
+    }
+
+    /* 外部リンクセクションのラベル */
+    .nav-label {
+      font-size: 0.72rem;
+      color: #7f8c8d;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2.5rem;
+      font-size: 0.95rem;
+      line-height: 2;
+      color: #4a6274;
+    }
+
+    footer a {
+      color: #1a6fa3;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="title">
-      <img src="title1.gif" width=360 height=72 alt="なんでんよか！">
-    </div>
-    <ul class="date">
-      <li>1996年12月15日初発信</li>
-      <li>2023年3月12日更新</li>
+    <img src="title1.gif" width="360" height="72" alt="なんでんよか！">
+    <ul class="publish-date">
+      <li>1996年12月15日 初発信</li>
+      <li>2023年3月12日 更新</li>
     </ul>
   </header>
+
   <main>
-  <div class="greeting">
-  <p>はじめてみなさんにお目にかかってから、何年になるとじゃろ？<br>
-    あんたさんで、何人来らっしゃったことになるかね？</p>
-  <p>ほうっ、ぎょうさん、来らっしゃったつね。はぁ、ありがたかねぇ。<br>
-    まあまあ、そぎゃん所にぼおっと立っとらんで、中に入らんね。</p>
-  </div>
-  <navi>
-    <ul>
-      <li><a href="index2.html">ばあちゃんのあがり口「ばあちゃんも生きとるよ」</a></li>
-      <li><a href="gamadasu/01.html">がまだすじいさん</a></li>
-      <li><a href="matsuri/01.html">祭りのあとさき</a></li>
-      <li><a href="kakiwari/index.html">かきわりの風景</a></li>
-    </ul>
-    <ul>
-      <li><a href="https://oyama.me">おやまあ！</a></li>
-      <li><a href="https://senryu.me">60の手習い「川柳me」</a></li>
-      <li><a href="https://senryu.me/kasen">酔人三吟</a></li>
-      <li><a href="https://senryu.me/ameagari">雨あがり</a></li>
-      <li><a href="https://senryu.me/histoires">ぐるぐる</a></li>
-    </ul>
-    <ul>
-      <li><a href="2014spring/01.html"><marquee scrolldelay="200" scrollamount="10" width=80%>2014年3月更新…追いかけてクリック…</marquee></a></li>
-    </ul>
-    <ul>
-      <li><a href="2017/NEZU/index.html">ネズの晩</a></li>
-      <li><a href="2017/SECH/index.html">おせち</a></li>
-      <li><a href="2017/IKUJI/index.html">昭和33年の育児日記</a></li>
-    </ul>
-    <ul>
-      <li><a href="2018ojaKanreki/20180730/index.html">還暦!!!</a></li>
-      <li><a href="2018ojaKanreki/genome/index.html">ゲノム編集技術って!？</a></li>
-      <li><a href="2019/index.html">アウシュヴィッツ</a></li>
-      <li><a href="2020/index.html">いちごのつる</a></li>
-    </ul>
-  </navi>
-  </main>
-  <footer>
     <div class="greeting">
-      <a href="mailto:baachan20012001@yahoo.co.jp">メール</a>ばくれんね。<br>
-      待っとうよ。楽しみにしとるけんね。
+      <p>はじめてみなさんにお目にかかってから、何年になるとじゃろ？<br>
+        あんたさんで、何人来らっしゃったことになるかね？</p>
+      <p>ほうっ、ぎょうさん、来らっしゃったつね。はぁ、ありがたかねぇ。<br>
+        まあまあ、そぎゃん所にぼおっと立っとらんで、中に入らんね。</p>
     </div>
+
+    <nav>
+      <ul class="nav-section">
+        <li><a href="index2.html">ばあちゃんのあがり口「ばあちゃんも生きとるよ」</a></li>
+        <li><a href="gamadasu/01.html">がまだすじいさん</a></li>
+        <li><a href="matsuri/01.html">祭りのあとさき</a></li>
+        <li><a href="kakiwari/index.html">かきわりの風景</a></li>
+      </ul>
+
+      <ul class="nav-section">
+<li><a href="https://oyama.me">おやまあ！</a></li>
+        <li><a href="https://senryu.me">60の手習い「川柳me」</a></li>
+        <li><a href="https://senryu.me/kasen">酔人三吟</a></li>
+        <li><a href="https://senryu.me/ameagari">雨あがり</a></li>
+        <li><a href="https://senryu.me/histoires">ぐるぐる</a></li>
+      </ul>
+
+      <ul class="nav-section">
+        <li><a href="2014spring/01.html">2014年3月 春の更新</a></li>
+        <li><a href="2017/NEZU/index.html">ネズの晩</a></li>
+        <li><a href="2017/SECH/index.html">おせち</a></li>
+        <li><a href="2017/IKUJI/index.html">昭和33年の育児日記</a></li>
+        <li><a href="2018ojaKanreki/20180730/index.html">還暦!!!</a></li>
+        <li><a href="2018ojaKanreki/genome/index.html">ゲノム編集技術って!？</a></li>
+        <li><a href="2019/index.html">アウシュヴィッツ</a></li>
+        <li><a href="2020/index.html">いちごのつる</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer>
+    <a href="mailto:baachan20012001@yahoo.co.jp">メール</a>ばくれんね。<br>
+    待っとうよ。楽しみにしとるけんね。
   </footer>
 </body>
 </html>
