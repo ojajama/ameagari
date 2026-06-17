@@ -434,7 +434,7 @@ a:link, a:visited, a:hover, a:active {
 }
 .house .manual {
     font-size: 1.2rem;
-    line-height: 1.6rem;
+    line-height: 1.6;
     padding: 0px 20px 0px;
 }
 .house ul {
@@ -455,7 +455,7 @@ a:link, a:visited, a:hover, a:active {
     border-spacing: 20px 5px;
     table-layout: fixed;
     font-size: 1.3rem;
-    line-height: 1.6rem;
+    line-height: 1.6;
 }
 .house .child {
     display: table-cell;

@@ -137,20 +137,20 @@ header #nanDENyoka {
 
 #main_visual {
     width: 800px;
-    height: 600spx;
+    height: 600px;
     margin: 0 auto 48px;
 }
 
-#point { margin-bottom: 30px; }
-#point section {
+.point { margin-bottom: 30px; }
+.point section {
     margin-bottom: 10px;
     overflow: hidden;
 } 
-#point figure {
+.point figure {
     float: right;
     margin: 0 0 0 16px;
 }
-#point figcaption {
+.point figcaption {
     font-size: 12px;
     color: #9C9689;
     text-align: center;
@@ -221,9 +221,6 @@ header #nanDENyoka {
 
 #side_banner .nanden {
     display: inline-block;
-    background: #f1ede4;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f1ede4));
-    background: -webkit-linear-gradient(top,   #ffffff 0%,#f1ede4 100%);
     background: linear-gradient(to bottom,  #ffffff 0%,#f1ede4 100%);
     color: #b7a077;
     padding: 10px;
@@ -234,11 +231,7 @@ header #nanDENyoka {
 #side_contact {
     margin-bottom: 30px;
     border: 1px solid #b7a077;
-    color: #7F7259;
     text-align: center;
-}
-
-#side_contact {
     background-color: #b7a077;
     color: #fff;
     padding: 7px;
@@ -372,7 +365,7 @@ footer small {
         width: 100%;
         height: auto;
     }
-    #point figure {
+    .point figure {
         float: none;
         margin: 0 0 11px 0;
     }
