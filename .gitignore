@@ -1,12 +1,4 @@
-# 画像・動画・バイナリ（Gitで管理しない）
-*.jpg
-*.jpeg
-*.JPG
-*.JPEG
-*.gif
-*.GIF
-*.png
-*.PNG
+# 動画・バイナリ（Gitで管理しない）
 *.MOV
 *.mov
 *.mp4
@@ -16,6 +8,14 @@
 *.PDF
 *.thmx
 *.db
+
+# 2019フォルダ：jpg以下（被災地写真など）は除外
+2019/jpg/
+
+# 2019/pdf と 2020/pdf は公開対象なので除外を解除
+!2019/pdf/*.pdf
+!2020/sansyonoki/pdf/*.pdf
+!2020/rokuro/pdf/*.pdf
 
 # macOS
 .DS_Store
